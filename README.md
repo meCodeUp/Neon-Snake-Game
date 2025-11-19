@@ -40,11 +40,6 @@ Neon Snake bringt den Klassiker in die Moderne. Mit leuchtenden Neon-Effekten, e
 
 Es ist keine Installation notwendig! Das Spiel läuft direkt im Browser.
 
-1.  Lade das Repository herunter oder klone es:
-    ```bash
-    git clone https://github.com/DeinUsername/Neon-Snake-Game.git
-    ```
-2.  Öffne die Datei `index.html` in einem modernen Webbrowser (Chrome, Firefox, Safari, Edge).
 
 ## 🛠️ Technologien
 
