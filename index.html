@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Snake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="splash-screen" class="splash-overlay">
+        <div class="splash-content">
+            <h1>NEON SNAKE</h1>
+            <p>TAP TO START</p>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <header>
+            <h1>NEON SNAKE</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">SCORE</span>
+                    <span id="score" class="value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">HIGH SCORE</span>
+                    <span id="high-score" class="value">0</span>
+                </div>
+                <button id="mute-btn" class="icon-btn" aria-label="Toggle Sound">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <line x1="23" y1="9" x2="17" y2="15"></line>
+                        <line x1="17" y1="9" x2="23" y2="15"></line>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="600" height="600"></canvas>
+            <div id="start-screen" class="overlay">
+                <h2>SELECT DIFFICULTY</h2>
+                <div class="mode-select">
+                    <button class="mode-btn" data-speed="150">SLOW</button>
+                    <button class="mode-btn" data-speed="100">NORMAL</button>
+                    <button class="mode-btn" data-speed="60">FAST</button>
+                </div>
+                <p class="controls-hint">Use Arrow Keys or WASD to Move</p>
+            </div>
+            <div id="game-over-screen" class="overlay hidden">
+                <h2>GAME OVER</h2>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button id="restart-btn">PLAY AGAIN</button>
+            </div>
+        </div>
+
+        <div class="mobile-controls">
+            <button class="d-pad-btn up" id="btn-up">▲</button>
+            <div class="d-pad-row">
+                <button class="d-pad-btn left" id="btn-left">◀</button>
+                <button class="d-pad-btn right" id="btn-right">▶</button>
+            </div>
+            <button class="d-pad-btn down" id="btn-down">▼</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
