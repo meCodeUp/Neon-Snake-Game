@@ -330,25 +330,74 @@ button:active {
 
 /* --- Responsive Design --- */
 @media (max-width: 850px) {
-    .mobile-controls {
-        display: flex;
+    body {
+        height: 100dvh;
+        /* Use dynamic viewport height for mobile browsers */
+        align-items: flex-start;
+        /* Align to top to prevent centering issues on small screens */
     }
 
     .game-container {
-        padding: 1rem 0.5rem;
+        padding: 0.5rem;
+        height: 100%;
+        justify-content: space-between;
+        /* Distribute space */
+        gap: 0.5rem;
     }
 
-    canvas {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1/1;
+    header {
+        padding: 0.5rem 1rem;
+        flex-shrink: 0;
+        /* Prevent header from shrinking too much */
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .score-board {
         gap: 1rem;
+    }
+
+    .value {
+        font-size: 1.2rem;
+    }
+
+    .canvas-wrapper {
+        flex-grow: 1;
+        /* Let canvas take available space */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-height: 60vh;
+        /* Limit height to leave room for controls */
+    }
+
+    canvas {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        aspect-ratio: 1/1;
+    }
+
+    .mobile-controls {
+        display: flex;
+        margin-top: 0;
+        padding-bottom: 1rem;
+        flex-shrink: 0;
+    }
+
+    .d-pad-row {
+        gap: 45px;
+        /* Reduced gap */
+    }
+
+    .d-pad-btn {
+        width: 45px;
+        /* Reduced size */
+        height: 45px;
+        font-size: 1.2rem;
     }
 }
